@@ -1,6 +1,7 @@
 package com.reverse.canvastech
 
 import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.drawable.BitmapDrawable
@@ -64,5 +65,17 @@ class MainActivity : AppCompatActivity() {
         box4.draw(canvas)
 
         imageV.background = BitmapDrawable(resources, bitmap)
+
+        loader.setOnClickListener{
+            val d = resources.getDrawable(R.drawable.icon1, null)
+
+            val left5 = 50
+            val top5 = 50
+            val right5 = 375
+            val bottom5 = 375
+
+            d.setBounds( left5, top5, right5, bottom5)
+            d.draw(canvas)
+        }
     }
 }
